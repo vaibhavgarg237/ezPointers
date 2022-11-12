@@ -1,0 +1,32 @@
+{
+  "name": "ezpointers",
+  "version": "1.0.0",
+  "description": "Beautiful mouse pointers for your beautiful websites!",
+  "keywords": [
+    "mouse",
+    "pointers",
+    "npm",
+    "package",
+    "npm-package"
+  ],
+  "homepage": "https://github.com/vaibhavgarg237/ezPointers",
+  "bugs": {
+    "url": "https://github.com/vaibhavgarg237/ezPointers/issues",
+    "email": "vaibhavgarg190199@gmail.com"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vaibhavgarg237/ezPointers.git"
+  },
+  "author": "Vaibhav Garg <vaibhavgarg190199@gmail.com> (vaibhavgarg.tech)",
+  "license": "MIT",
+  "private": false,
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "engineStrict": false
+}
