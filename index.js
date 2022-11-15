@@ -1,9 +1,14 @@
+let pointerId = "mouse-pointer";
+
 //Add pointer element to DOM
-const init = (pointerId = "mouse-pointer") => {
-  console.log("init called ", ptr);
-  const mousePointer = document.createElement("div");
-  mousePointer.setAttribute("id", pointerId);
-  document.body.appendChild(mousePointer);
+const init = (ptr = "mouse-pointer") => {
+  if (document.getElementById(ptr) === null) {
+    console.log("init called ", ptr);
+    pointerId = ptr;
+    const mousePointer = document.createElement("div");
+    mousePointer.setAttribute("id", ptr);
+    document.body.appendChild(mousePointer);
+  }
 };
 
 const movePointer = ({
