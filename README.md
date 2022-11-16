@@ -21,13 +21,13 @@ npm install ezpointers
 #### 1. Import functions from npm package
 
 ```
-import { init, movePointer } from "ezpointers";
+import { initRound, movePointerRound } from "ezpointers";
 ```
 
 #### 2. Create mouse pointer element
 
 ```
-init();  // Can also pass custom id name , init("your-mouse-id");
+initRound();  // Can also pass custom id name , initRound("your-mouse-id");
 ```
 
 #### 3. Move/Customize pointer element
@@ -46,7 +46,7 @@ init();  // Can also pass custom id name , init("your-mouse-id");
 - topOffset : 30,
 
 ```
-movePointer({}); // Pass this empty object for default pointer
+movePointerRound({}); // Pass this empty object for default pointer
 ```
 
 #### _Customize mouse pointer:_
@@ -54,13 +54,13 @@ movePointer({}); // Pass this empty object for default pointer
 For eg: Black pointer with default parameters
 
 ```
-movePointer({ color: "black" });
+movePointerRound({ color: "black" });
 ```
 
 For eg: Black pointer with bigger size & rest with default parameters
 
 ```
-movePointer({ color: "black", width: "5rem", height: "5rem" });
+movePointerRound({ color: "black", width: "5rem", height: "5rem" });
 ```
 
 #### _React Sample code_
@@ -73,13 +73,13 @@ Sample Code (React):
 
 ```
 import React, { useEffect } from "react";
-import { init, movePointer } from "ezpointers";
+import { initRound, movePointerRound } from "ezpointers";
 
-init();
+initRound();
 
 function Work() {
   useEffect(() => {
-    movePointer({});
+    movePointerRound({});
   });
   return <div>Namaste World</div>;
 }
@@ -90,7 +90,7 @@ export default Work;
 
 ## Contributing
 
-We welcome and appreciate new contributions. All changes should be committed to `index.js` only. If you want to add new CSS/JS files please mention in Readme/create a new issue for reference. Before you open an issue please review below guidelines.
+We welcome and appreciate new contributions. All changes should be committed to `*.js` files only. If you want to add new CSS/JS files please mention in Readme/create a new issue for reference. Before you open an issue please review below guidelines.
 
 #### Anyone
 
