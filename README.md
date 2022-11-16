@@ -6,9 +6,21 @@
 
 ezPointers is a lightweight, free and open-source JavaScript library to create beautiful mouse pointers with customised effects.
 
-Tested with React & JavaScript.
+Tested with React.
+
+Demo for Round Pointer:
 
 https://user-images.githubusercontent.com/67408018/202010052-7701596a-50a8-4e2d-ac29-c02f71c4152b.mp4
+
+Demo for Shoot Pointer:
+
+- Transition with 0s ( movePointerShoot{transition : "0s"} )->
+
+https://user-images.githubusercontent.com/67408018/202190510-d876f5c7-98a7-4fbe-b9b0-1d8d7462d6db.mp4
+
+- Transition with 0.1s ( movePointerShoot{transition : "0.1s"} )->
+
+https://user-images.githubusercontent.com/67408018/202190573-63a0a9a1-e5ba-45ea-9f63-69413f16adec.mp4
 
 ## Demo Example
 
@@ -20,24 +32,33 @@ npm install ezpointers
 
 #### 1. Import functions from npm package
 
+For Round Pointer:
+
 ```
 import { initRound, movePointerRound } from "ezpointers";
+```
+
+For Shoot Pointer:
+
+```
+import { initShoot, movePointerShoot } from "ezpointers";
 ```
 
 #### 2. Create mouse pointer element
 
 ```
 initRound();  // Can also pass custom id name , initRound("your-mouse-id");
+//OR initShoot();
 ```
 
 #### 3. Move/Customize pointer element
 
 #### _Default parameters: To use default mouse pointer with default parameters._
 
-- color : "white",
+- color : "white", //background color
 - width : "3.5rem",
-- height : "3.5rem",
-- transition : "0.2s",
+- height : "3.5rem", //adjust for round size
+- transition : "0.2s", //adjust for transition speed
 - transitionDuration : "100ms",
 - mixBlendMode : "difference",
 - zIndex : 100,
@@ -46,30 +67,30 @@ initRound();  // Can also pass custom id name , initRound("your-mouse-id");
 - topOffset : 30,
 
 ```
+//For Round pointer
 movePointerRound({}); // Pass this empty object for default pointer
+
+//For Shoot Pointer
+movePointerShoot({});
 ```
 
 #### _Customize mouse pointer:_
 
-For eg: Black pointer with default parameters
+- For eg: Black pointer with default parameters
 
 ```
 movePointerRound({ color: "black" });
 ```
 
-For eg: Black pointer with bigger size & rest with default parameters
+- For eg: Black pointer with bigger size & rest with default parameters
 
 ```
 movePointerRound({ color: "black", width: "5rem", height: "5rem" });
 ```
 
-#### _React Sample code_
+#### **React Sample code**
 
-Demo Video:
-
-https://user-images.githubusercontent.com/67408018/202010052-7701596a-50a8-4e2d-ac29-c02f71c4152b.mp4
-
-Sample Code (React):
+- #### _Round Pointer_
 
 ```
 import React, { useEffect } from "react";
@@ -80,6 +101,25 @@ initRound();
 function Work() {
   useEffect(() => {
     movePointerRound({});
+  });
+  return <div>Namaste World</div>;
+}
+
+export default Work;
+
+```
+
+- #### _Shoot Pointer_
+
+```
+import React, { useEffect } from "react";
+import { initShoot, movePointerShoot } from "ezpointers";
+
+initShoot();
+
+function Work() {
+  useEffect(() => {
+    movePointerShoot({});
   });
   return <div>Namaste World</div>;
 }
