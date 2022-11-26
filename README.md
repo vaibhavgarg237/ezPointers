@@ -2,12 +2,25 @@
   <img src="https://user-images.githubusercontent.com/67408018/202010497-db722491-f1c7-49cd-9aa3-7c25287aba11.png"/>
 </p>
 
-# **ezPointers**
+# <p align="center">**ezPointers**</p>
 
-ezPointers is a lightweight, free and open-source JavaScript library to create beautiful mouse pointers with customised effects.
+<p align="center"> <i>ezPointers is a lightweight, free and open-source JavaScript library to create beautiful mouse pointers with customised effects.</i> </p>
+
+### ***Table of Contents***
+- [Demo](#demo)
+- [Using ezpointers...](#using-ezpointers)
+  - [import functions](#1-import-functions-from-npm-package)
+  - [create pointer](#2-create-mouse-pointer-element)
+  - [***customize pointer element***](#3-movecustomize-pointer-element)
+- [React Sample code](#react-sample-code)
+- [Contributing](#contributing)
+  - [Creating a PR](#creating-a-pr)
+  - [Code format & preferences](#code-format--preferences)
+  - [Commit message format](#commit-message-format)
 
 Tested with React.
 
+### ***Demo***
 Demo for Round Pointer:
 
 https://user-images.githubusercontent.com/67408018/202010052-7701596a-50a8-4e2d-ac29-c02f71c4152b.mp4
@@ -22,7 +35,7 @@ https://user-images.githubusercontent.com/67408018/202190510-d876f5c7-98a7-4fbe-
 
 https://user-images.githubusercontent.com/67408018/202190573-63a0a9a1-e5ba-45ea-9f63-69413f16adec.mp4
 
-## Demo Example
+## ***Using ezpointers...*** 
 
 Install npm package
 
@@ -30,7 +43,7 @@ Install npm package
 npm install ezpointers
 ```
 
-#### 1. Import functions from npm package
+### 1. Import functions from npm package
 
 For Round Pointer:
 
@@ -44,14 +57,14 @@ For Shoot Pointer:
 import { initShoot, movePointerShoot } from "ezpointers";
 ```
 
-#### 2. Create mouse pointer element
+### 2. Create mouse pointer element
 
 ```
 initRound();  // Can also pass custom id name , initRound("your-mouse-id");
 //OR initShoot();
 ```
 
-#### 3. Move/Customize pointer element
+### 3. Move/Customize pointer element
 
 #### _Default parameters: To use default mouse pointer with default parameters._
 
@@ -88,7 +101,7 @@ movePointerRound({ color: "black" });
 movePointerRound({ color: "black", width: "5rem", height: "5rem" });
 ```
 
-#### **React Sample code**
+## ***React Sample code***
 
 - #### _Round Pointer_
 
@@ -128,7 +141,7 @@ export default Work;
 
 ```
 
-## Contributing
+## ***Contributing***
 
 We welcome and appreciate new contributions. All changes should be committed to `*.js` files only. If you want to add new CSS/JS files please mention in Readme/create a new issue for reference. Before you open an issue please review below guidelines.
 
